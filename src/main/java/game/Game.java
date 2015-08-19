@@ -25,7 +25,8 @@ class Game {
                     addNums();
                     break;
                 case 3:
-                    findPrime();
+                    System.out.println("Welcome to the prime finder");
+                    primeGame();
                     break;
                 default:
                     System.out.println("Invalid choice, please try again");
@@ -33,7 +34,17 @@ class Game {
         }
     }
 
-    private static void findPrime() {
+    private static void primeGame() {
+        while (true) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Please enter a whole number");
+            int num = scanner.nextInt();
+            Boolean result = primeFinder(num);
+            if(result == true)
+                System.out.println("Your number, " + num + " is prime!");
+            else
+                System.out.println("Your number, " + num + " is not prime!");
+        }
     }
 
     private static void addNums() {
@@ -68,5 +79,18 @@ class Game {
     public static String stringReverser(String inputString) {
         String reversed = new StringBuilder(inputString).reverse().toString();
         return reversed;
+    }
+
+    public static Boolean primeFinder(int x) {
+        if (x == 2) return true;
+
+        if (x % 2 == 0) return false;
+
+        for(int i = 2; 2*i < x; i++) {
+            if(x % i == 0)
+                return false;
+        }
+        return true;
+
     }
 }

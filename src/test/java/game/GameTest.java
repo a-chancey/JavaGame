@@ -22,6 +22,20 @@ public class GameTest {
         assertEquals("tseT", result);
     }
 
+    @Test
+    public void PrimeFinderTest(){
+        int w = 2;
+        int x = 4;
+        int y = 5;
+        int z = 14;
 
-
+        Boolean resultW = Game.primeFinder(w);
+        Boolean resultX = Game.primeFinder(x);
+        Boolean resultY = Game.primeFinder(y);
+        Boolean resultZ = Game.primeFinder(z);
+        assertEquals(true, resultW);
+        assertEquals(false, resultX);
+        assertEquals(true, resultY);
+        assertEquals(false, resultZ);
+    }
 }
