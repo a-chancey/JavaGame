@@ -18,9 +18,7 @@ public class GameTest {
     @Test
     public void StringReverserTest(){
         String input = "Test";
-        String result;
-
-        result = Game.stringReverser(input);
+        String result = Game.stringReverser(input);
         assertEquals("tseT", result);
     }
 

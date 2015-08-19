@@ -21,6 +21,7 @@ class Game {
                     stringGame();
                     break;
                 case 2:
+                    System.out.println("Welcome to the number adder!");
                     addNums();
                     break;
                 case 3:
@@ -36,6 +37,20 @@ class Game {
     }
 
     private static void addNums() {
+        while (true) {
+            int x = 0;
+            int y = 0;
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.println("Input a whole number:");
+            x = scanner.nextInt();
+
+            System.out.println("Input a second whole number:");
+            y = scanner.nextInt();
+
+            x = x + y;
+            System.out.println("Your answer is: " + x);
+        }
     }
 
     private static void stringGame() {
@@ -45,7 +60,7 @@ class Game {
             String inputString = stringy.nextLine();
 
             String output = stringReverser(inputString);
-            
+
             System.out.println("Your reversed string is " + output);
         }
     }
