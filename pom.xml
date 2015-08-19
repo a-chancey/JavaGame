@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.manifestcorp.achancey</groupId>
     <artifactId>javaGame</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0-Final</version>
     <name>Game</name>
     <description>Java Game</description>
     <dependencies>
